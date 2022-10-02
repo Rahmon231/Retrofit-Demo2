@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Response> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: "+t.getMessage());
             }
         });
     }
